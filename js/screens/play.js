@@ -6,7 +6,7 @@ game.PlayScreen = me.ScreenObject.extend({
 	    // reset the score
 	    game.data.score = 0;
             //Starts the game at Level 1
-            me.levelDirector.loadLevel("Level01");
+            me.levelDirector.loadLevel("FD");
             
             //Starting gold  amount based on exp2's level.
             game.data.gold += Number(game.data.exp2 * 5);
