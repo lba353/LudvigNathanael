@@ -8,9 +8,6 @@ game.PlayScreen = me.ScreenObject.extend({
             //Starts the game at Level 1
             me.levelDirector.loadLevel("FD");
             
-            //Starting gold  amount based on exp2's level.
-            game.data.gold += Number(game.data.exp2 * 5);
-            
             //Sets player at 350 pixels right and 0 pixels down.
             this.resetPlayer(350, 0);
                 

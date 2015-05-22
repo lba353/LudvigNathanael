@@ -159,11 +159,8 @@ game.PlayerOneEntity = me.Entity.extend ({
     
     collideHandler: function(response) {
         this.now = new Date().getTime();
-        if(response.b.type === "EnemyBaseEntity") {
+        if(response.b.type === "Player2") {
             this.collideWithEnemyBase(response);            
-        }    
-        else if(response.b.type === "EnemyCreep" || response.b.type === "EnemyPlayerEntity") {
-            this.collideWithEnemyTeam(response);
         }        
     },
     
