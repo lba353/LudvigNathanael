@@ -132,12 +132,8 @@
                                 }
                                 else {
                                     var data = jQuery.parseJSON(response);
-                                    game.data.exp = Number(data["exp"]);
-                                    game.data.exp1 = Number(data["exp1"]);
-                                    game.data.exp2 = Number(data["exp2"]);
-                                    game.data.exp3 = Number(data["exp3"]);
-                                    game.data.exp4 = Number(data["exp4"]);
-                                    me.state.change(me.state.SPENDEXP);
+                                    game.data.gold = Number(data["gold"]);
+                                    me.state.change(me.state.SHOP);
                                 }
                             })
                             .fail(function(response) {

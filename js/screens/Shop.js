@@ -92,9 +92,29 @@ game.Shop = me.ScreenObject.extend({
                             alert ("NOT ENOUGH GOLD");
                         }
                     }
-                    //If "F6" is pressed, then change to the menu state.
+                    //If "F6" is pressed, then change to the menu state and save the remaining items and bought stages/characters.
                     else if(action === "F6") {
                         me.state.change(me.state.MENU);
+                        
+                        $.ajax({
+                            type: "POST",
+                            url: "php/Controller/Save-User.php",
+                            data: {
+                                gold: game.data.gold
+                            },
+                            dataType: "text"
+                        })
+                                .success(function(response) {
+                                    if (response === "true") {
+                                        me.state.change(me.state.MENU);
+                                    }
+                                    else {
+                                        alert(response);
+                                    }
+                                })
+                                .fail(function(response) {
+                                    alert("Fail");
+                                });
                     }
                 });
 	},
