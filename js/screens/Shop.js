@@ -92,9 +92,9 @@ game.Shop = me.ScreenObject.extend({
                             alert ("NOT ENOUGH GOLD");
                         }
                     }
-                    //If "F6" is pressed, then change to the play state.
+                    //If "F6" is pressed, then change to the menu state.
                     else if(action === "F6") {
-                        me.state.change(me.state.PLAY);
+                        me.state.change(me.state.MENU);
                     }
                 });
 	},
