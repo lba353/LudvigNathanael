@@ -2,10 +2,7 @@ game.NewProfile = me.ScreenObject.extend({
 	/**	
 	 *  action to perform on state change
 	 */
-	onResetEvent: function() {	
-                //Plays audio.
-                me.audio.playTrack("Preparing_For_Battle");
-            
+	onResetEvent: function() {	            
                 //Adds a new child which is the "new-screen" image.
 		me.game.world.addChild(new me.Sprite(0, 0, me.loader.getImage("new-screen")), -10);
                 
@@ -46,10 +43,7 @@ game.NewProfile = me.ScreenObject.extend({
 	/**	
 	 *  action to perform when leaving this screen (state change)
 	 */
-	onDestroyEvent: function() {
-            //Stops audio.
-            me.audio.stopTrack();
-            
+	onDestroyEvent: function() {           
             //Sets the IDs to hidden again.
             document.getElementById("input").style.visibility = "hidden";
             document.getElementById("register").style.visibility = "hidden";
