@@ -11,7 +11,10 @@ game.PlayScreen = me.ScreenObject.extend({
             //Sets player at 350 pixels right and 0 pixels down.
             this.resetPlayer(350, 0);
                 
-            //Variables set that are used throught out the game (Lines 18-34).               
+            //Variables set that are used throught out the game (Lines 14-34).               
+            var experienceManager = me.pool.pull("ExperienceManager", 0, 0, {});
+            me.game.world.addChild(experienceManager, 0);
+            
             var heroDeathManager = me.pool.pull("HeroDeathManager", 0, 0, {});
             me.game.world.addChild(heroDeathManager, 0);
             

@@ -6,6 +6,8 @@ game.resources = [
 	 */
         
         {name: "mario", type:"image", src: "data/img/Mario.png"},
+        {name: "meta-tiles", type:"image", src: "data/img/meta-tiles.png"},
+        {name: "FD", type:"image", src: "data/img/final_destination.png"},
 
 	/* Atlases 
 	 * @example
