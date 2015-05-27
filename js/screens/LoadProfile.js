@@ -2,10 +2,7 @@ game.LoadProfile = me.ScreenObject.extend({
 	/**	
 	 *  action to perform on state change
 	 */
-	onResetEvent: function() {
-                //Plays audio.
-                me.audio.playTrack("Preparing_For_Battle");
-                
+	onResetEvent: function() {                
                 //Adds a new child which is the "load-screen" image.
 		me.game.world.addChild(new me.Sprite(0, 0, me.loader.getImage("load-screen")), -10);
                 

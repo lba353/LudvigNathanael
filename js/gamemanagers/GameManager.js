@@ -23,21 +23,17 @@ game.ExperienceManager = Object.extend ({
     
     //Adds 10 exp and saves the exp by using ajax.
     gameOverWin: function() {
-        game.data.exp += 10;
+        game.data.gold += 50-100;
         this.gameOver = true;
-        console.log(game.data.exp);
-        me.save.exp = game.data.exp;
+        console.log(game.data.gold);
+        me.save.gold = game.data.gold;
         
         
         $.ajax({
             type: "POST",
             url: "php/Controller/Save-User.php",
             data: {
-                exp: game.data.exp,
-                exp1: game.data.exp1,
-                exp2: game.data.exp2,
-                exp3: game.data.exp3,
-                exp4: game.data.exp4
+                gold: game.data.gold
             },
             dataType: "text"
         })
@@ -56,20 +52,16 @@ game.ExperienceManager = Object.extend ({
     
     //Adds 1 exp and saves the exp using ajax.
     gameOverLose: function() {
-        game.data.exp += 1;
+        game.data.gold += 101-150;
         this.gameOver = true;
-        console.log(game.data.exp);
-        me.save.exp = game.data.exp;
+        console.log(game.data.gold);
+        me.save.gold = game.data.gold;
        
         $.ajax({
             type: "POST",
             url: "php/Controller/Save-User.php",
             data: {
-                exp: game.data.exp,
-                exp1: game.data.exp1,
-                exp2: game.data.exp2,
-                exp3: game.data.exp3,
-                exp4: game.data.exp4
+                gold: game.data.gold
             },
             dataType: "text"
         })

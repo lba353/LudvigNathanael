@@ -4,7 +4,7 @@ game.Shop = me.ScreenObject.extend({
 	 */
 	onResetEvent: function() {
                 //Adds new child that contains the exp-screen image.
-		me.game.world.addChild(new me.Sprite(0, 0, me.loader.getImage("exp-screen")), -10);
+		me.game.world.addChild(new me.Sprite(0, 0, me.loader.getImage("shop-screen")), -10);
                 
                 //Binds the shop keys.
                 me.input.bindKey(me.input.KEY.F1, "F1");
@@ -124,9 +124,6 @@ game.Shop = me.ScreenObject.extend({
 	 *  action to perform when leaving this screen (state change)
 	 */
 	onDestroyEvent: function() {
-            //Stops audio.
-            me.audio.stopTrack();
-            
             //Unbinds the shop keys.
             me.input.unbindKey(me.input.KEY.F1, "F1");
             me.input.unbindKey(me.input.KEY.F2, "F2");

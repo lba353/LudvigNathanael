@@ -133,7 +133,7 @@
                                 else {
                                     var data = jQuery.parseJSON(response);
                                     game.data.gold = Number(data["gold"]);
-                                    me.state.change(me.state.SHOP);
+                                    me.state.change(me.state.LOAD);
                                 }
                             })
                             .fail(function(response) {
