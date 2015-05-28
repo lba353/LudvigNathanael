@@ -48,7 +48,10 @@ game.PlayScreen = me.ScreenObject.extend({
         
         //When the player gets reset, these functions are carried out.
         resetPlayer: function(x, y) {
-            game.data.player = me.pool.pull("player", x, y, {});
-            me.game.world.addChild(game.data.player, 5);
+            game.data.player1 = me.pool.pull("player1", x, y, {});
+            me.game.world.addChild(game.data.player1, 5);
+            
+            game.data.player2 = me.pool.pull("player2", x, y, {});
+            me.game.world.addChild(game.data.player2, 5);
         }
 });
