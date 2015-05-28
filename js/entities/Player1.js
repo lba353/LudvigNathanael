@@ -26,6 +26,14 @@ game.PlayerOneEntity = me.Entity.extend ({
                     return(new me.Rect(0, 0, 64, 64)).toPolygon();
                 }
             }]);
+        
+        //Binds the movement keys.
+        me.input.bindKey(me.input.KEY.D, "right1");
+        me.input.bindKey(me.input.KEY.A, "left1");
+        me.input.bindKey(me.input.KEY.W, "jump1");
+        me.input.bindKey(me.input.KEY.R, "regularAttack1");
+        me.input.bindKey(me.input.KEY.T, "specialAttack1");
+        me.input.bindKey(me.input.KEY.Y, "block1");
     },
     
     setPlayerTimers: function() {
@@ -76,21 +84,21 @@ game.PlayerOneEntity = me.Entity.extend ({
     },
     
     checkKeyPressesAndMovement: function() {
-        if(me.input.isKeyPressed("right")) {
+        if(me.input.isKeyPressed("right1")) {
             this.moveRight();
         }
-        else if(me.input.isKeyPressed("left")) {            
+        else if(me.input.isKeyPressed("left1")) {            
             this.moveLeft();
         }
         else {
             this.body.vel.x = 0;
         }
         
-        if(me.input.isKeyPressed("jump") && !this.body.jumping && !this.body.falling) {
+        if(me.input.isKeyPressed("jump1") && !this.body.jumping && !this.body.falling) {
             this.jump();
         }
         
-        this.attacking = me.input.isKeyPressed("attack");
+        this.attacking = me.input.isKeyPressed("regularAttack1");
     },
     
     moveRight: function() {

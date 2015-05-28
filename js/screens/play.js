@@ -6,7 +6,7 @@ game.PlayScreen = me.ScreenObject.extend({
 	    // reset the score
 	    game.data.score = 0;
             //Starts the game at Level 1
-            me.levelDirector.loadLevel("FD");
+            me.levelDirector.loadLevel("Final_Destination");
             
             //Sets player at 350 pixels right and 0 pixels down.
             this.resetPlayer(350, 0);
@@ -20,14 +20,6 @@ game.PlayScreen = me.ScreenObject.extend({
             
             var pause = me.pool.pull("PauseScreen", 0, 0, {});
             me.game.world.addChild(pause, 0);
-            
-            //Binds the movement keys.
-            me.input.bindKey(me.input.KEY.A || me.input.KEY.RIGHT, "right");
-            me.input.bindKey(me.input.KEY.S || me.input.KEY.LEFT, "left");
-            me.input.bindKey(me.input.KEY.W || me.input.KEY.UP, "jump");
-            me.input.bindKey(me.input.KEY.R || me.input.KEY.I, "regularAttack");
-            me.input.bindKey(me.input.KEY.T || me.input.KEY.O, "specialAttack");
-            me.input.bindKey(me.input.KEY.Y || me.input.KEY.P, "block");
             
             //Binds the pause key.
             me.input.bindKey(me.input.KEY.ESC, "pause");

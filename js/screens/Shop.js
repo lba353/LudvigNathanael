@@ -28,7 +28,7 @@ game.Shop = me.ScreenObject.extend({
                     
                     //Draws the following text.
                     draw: function(renderer) {
-                        this.font.draw(renderer.getContext(), "PRESS F1-F5 TO BUY, F6 TO SKIP", this.pos.x, this.pos.y);
+                        this.font.draw(renderer.getContext(), "PRESS F1-F5 TO BUY, F6 TO GO BACK TO THE MAIN MENU", this.pos.x, this.pos.y);
                         this.font.draw(renderer.getContext(), "CURRENT GOLD: " + game.data.gold.toString(), this.pos.x + 100, this.pos.y + 50);
                         this.font.draw(renderer.getContext(), "CHARACTERS", this.pos.x, this.pos.y + 150);
                         this.font.draw(renderer.getContext(), "F1: FOX" + " COST: " + goldcost1 , this.pos.x + 100, this.pos.y + 200);
@@ -95,26 +95,6 @@ game.Shop = me.ScreenObject.extend({
                     //If "F6" is pressed, then change to the menu state and save the remaining items and bought stages/characters.
                     else if(action === "F6") {
                         me.state.change(me.state.MENU);
-                        
-                        $.ajax({
-                            type: "POST",
-                            url: "php/Controller/Save-User.php",
-                            data: {
-                                gold: game.data.gold
-                            },
-                            dataType: "text"
-                        })
-                                .success(function(response) {
-                                    if (response === "true") {
-                                        me.state.change(me.state.MENU);
-                                    }
-                                    else {
-                                        alert(response);
-                                    }
-                                })
-                                .fail(function(response) {
-                                    alert("Fail");
-                                });
                     }
                 });
 	},

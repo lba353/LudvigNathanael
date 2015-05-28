@@ -4,14 +4,17 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/xampp/htdocs/LudvigNathanael/js/game.js</file>
-            <file>file:/C:/xampp/htdocs/LudvigNathanael/js/screens/LoadProfile.js</file>
             <file>file:/C:/xampp/htdocs/LudvigNathanael/js/resources.js</file>
-            <file>file:/C:/xampp/htdocs/LudvigNathanael/js/entities/HUD.js</file>
+            <file>file:/C:/xampp/htdocs/LudvigNathanael/index.css</file>
             <file>file:/C:/xampp/htdocs/LudvigNathanael/js/screens/title.js</file>
+            <file>file:/C:/xampp/htdocs/LudvigNathanael/index.php</file>
+            <file>file:/C:/xampp/htdocs/LudvigNathanael/js/screens/LoadProfile.js</file>
+            <file>file:/C:/xampp/htdocs/LudvigNathanael/js/entities/HUD.js</file>
+            <file>file:/C:/xampp/htdocs/LudvigNathanael/data/img/Mario.png</file>
+            <file>file:/C:/xampp/htdocs/LudvigNathanael/js/gamemanagers/HeroDeathManager.js</file>
             <file>file:/C:/xampp/htdocs/LudvigNathanael/js/screens/play.js</file>
             <file>file:/C:/xampp/htdocs/LudvigNathanael/js/entities/Player1.js</file>
             <file>file:/C:/xampp/htdocs/LudvigNathanael/js/entities/Player2.js</file>
-            <file>file:/C:/xampp/htdocs/LudvigNathanael/index.php</file>
             <file>file:/C:/xampp/htdocs/LudvigNathanael/js/screens/Shop.js</file>
             <file>file:/C:/xampp/htdocs/LudvigNathanael/js/screens/NewProfile.js</file>
         </group>

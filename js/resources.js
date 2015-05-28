@@ -6,9 +6,9 @@ game.resources = [
 	 */
         
         {name: "orc", type:"image", src: "data/img/orcSpear.png"},
-        {name: "mario", type:"image", src: "data/img/Mario1.png"},
+        {name: "mario", type:"image", src: "data/img/Mario.png"},
         {name: "meta-tiles", type:"image", src: "data/img/meta-tiles.png"},
-        {name: "FD", type:"image", src: "data/img/final_destination.png"},
+        {name: "final_destination", type:"image", src: "data/img/final_destination.png"},
         {name: "title-screen", type:"image", src: "data/img/Smash_Title.png"},
         {name: "load-screen", type:"image", src: "data/img/LoadScreen.jpg"},
         {name: "new-screen", type:"image", src: "data/img/NewScreen.jpg"},
@@ -25,7 +25,7 @@ game.resources = [
 	 * {name: "example01", type: "tmx", src: "data/map/example01.json"},
  	 */
         
-        {name: "FD", type: "tmx", src: "data/map/Final_Destination.tmx"}
+        {name: "Final_Destination", type: "tmx", src: "data/map/Final_Destination.tmx"}
 
 	/* Background music. 
 	 * @example
