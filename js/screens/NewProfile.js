@@ -21,8 +21,8 @@ game.NewProfile = me.ScreenObject.extend({
                 me.game.world.addChild(new (me.Renderable.extend({
                     //Sets the font, font size, and the font color.
                     init: function() {
-                        this._super(me.Renderable, "init", [10, 10, 300, 50]);
-                        this.font = new me.Font("Arial", 26, "green");
+                        this._super(me.Renderable, "init", [50, 100, 300, 50]);
+                        this.font = new me.Font("Arial", 40, "blue");
                     },
                     
                     //Draws the following text.

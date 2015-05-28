@@ -10,13 +10,13 @@ game.TitleScreen = me.ScreenObject.extend({
                 game.data.option1 = new (me.Renderable.extend({
                     init: function() {
                         this._super(me.Renderable, "init", [270, 240, 300, 50]);
-                        this.font = new me.Font("Arial", 46, "yellow");
+                        this.font = new me.Font("Arial", 70, "yellow");
                         me.input.registerPointerEvent('pointerdown', this, this.newGame.bind(this), true);
                     },
                     
                     draw: function(renderer) {
-                        this.font.draw(renderer.getContext(), "SUPER SMASH BROS!", 350, 130);
-                        this.font.draw(renderer.getContext(), "SMASH", this.pos.x, this.pos.y);
+                        this.font.draw(renderer.getContext(), "SUPER SMASH BROS!", 150, 130);
+                        this.font.draw(renderer.getContext(), "SMASH", 400, 250);
                     },
                     
                     update: function(dt) {
@@ -36,12 +36,12 @@ game.TitleScreen = me.ScreenObject.extend({
                 game.data.option2 = new (me.Renderable.extend({
                     init: function() {
                         this._super(me.Renderable, "init", [380, 340, 250, 50]);
-                        this.font = new me.Font("Arial", 46, "yellow");
+                        this.font = new me.Font("Arial", 70, "yellow");
                         me.input.registerPointerEvent('pointerdown', this, this.shop.bind(this), true);
                     },
                     
                     draw: function(renderer) {
-                        this.font.draw(renderer.getContext(), "SHOP", this.pos.x, this.pos.y);
+                        this.font.draw(renderer.getContext(), "SHOP", 425, 350);
                     },
                     
                     update: function(dt) {
@@ -52,7 +52,7 @@ game.TitleScreen = me.ScreenObject.extend({
                         //Goes to the load game screen.
                         me.input.releasePointerEvent('pointerdown', this);
                         me.input.releasePointerEvent('pointerdown', game.data.option1);
-                        me.state.change(me.state.SHOP);
+                        me.state.change(me.state.LOAD);
                     }
                 }));
                 
